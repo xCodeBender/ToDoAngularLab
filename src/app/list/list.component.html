@@ -1,0 +1,21 @@
+<p>TO Do List</p>
+
+<div *ngFor="let item of things; index as i ">
+    <p> {{i+ 1}} {{item.task}}</p>
+    <h3 *ngIf="item.completed">{{item.task}}</h3>  
+</div>
+  
+
+ 
+<form #itemForm="ngForm" (ngSubmit)="addToList(itemForm)">
+    
+      <input name="task" ngModel="" />
+      <input  name="completed" ngModel="" />
+      <button>Add to List</button>
+</form>  
+
+
+
+
+
+  
